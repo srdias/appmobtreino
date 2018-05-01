@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Treino</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="fundo">
+  <ion-list class="fundoListas">
+    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)" class="fundoListas">
+      {{item.dia}}, {{item.semana}}
+      <div class="item-note" item-end>
+        <span *ngIf="item.situacao==3">
+          Pendente
+          <ion-icon class="vermelho" name="warning"></ion-icon>
+        </span>
+        <span *ngIf="item.situacao==1 || item.situacao==2">
+          <ion-icon class="verde" name="thumbs-up"></ion-icon>
+        </span>
+        <span *ngIf="item.situacao==4">
+          <ion-icon class="azul" name="time"></ion-icon>
+        </span>
+      </div>
+    </button>
+  </ion-list>
+
+</ion-content>

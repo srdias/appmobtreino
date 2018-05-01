@@ -1,0 +1,42 @@
+
+.container {
+    margin-top: 5%;
+}
+
+h4 {
+    color: #4d2600;
+}
+
+.botao-container{
+    text-align: center;
+}
+    
+.login-box {	
+    margin-top: 25px;
+    padding: 10px 15px;
+    width: 80%;	
+    border-radius: 3px;
+    background-color: #dfebff;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button-icon-only {
+    background-color: #dfebff;
+    margin-top: 50px;
+
+    ion-icon {
+        padding: 0 0.4em;
+        color: #525252;
+    }
+}
+
+.circle-pic{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width:150px;
+    height:150px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}

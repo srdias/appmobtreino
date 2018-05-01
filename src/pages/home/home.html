@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>M3 Assessoria</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="fundo">
+
+  <ion-card *ngIf="outros.eventosemconfirmacao>0">
+    <ion-card-content>
+      <h2 style="color:red">Eventos</h2>
+      <p>Você tem
+        <b>{{outros.eventosemconfirmacao}} eventos</b> para confirmar.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="outros.semfeedback>0">
+    <ion-card-content>
+      <h2 style="color:red">Feedbacks de treinos</h2>
+      <p>Você tem
+        <b>{{outros.semfeedback}} treinos</b> de data anterior sem feedback informado.</p>
+
+      <button ion-button clear (click)="listaTreinoTapped($event)">
+        <div>Ver lista treinos</div>
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <h2>
+        <b>Treino do dia</b>
+      </h2>
+      <p class="large" [innerHTML]="treinoDia.descricao"></p>
+
+      <button ion-button clear (click)="treinoTapped($event, treinoDia)">
+        <div>Ver Treino</div>
+      </button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

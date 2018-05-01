@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            M3 Assessoria
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding class="fundo">
+    <div class="container">
+        <img class="circle-pic" src="assets/imgs/m3logo.png">
+        <div class="login-box">
+            <ion-input placeholder="Usuário" type="text" [(ngModel)]="item.usuario"></ion-input>
+            <hr/>
+            <ion-input placeholder="Senha" type="password" [(ngModel)]="item.senha"></ion-input>
+            
+        </div>
+        <br/>
+        <div class="botao-container">
+            <button ion-button (click)="itemTapped($event)" class="botoes">Entrar</button>
+        </div>
+        {{firstName}}
+    </div>
+</ion-content>

@@ -1,0 +1,33 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>M3 Assessoria</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="fundoMenu">
+
+
+    <ion-item class="identificacao">
+
+      <span class="atletaNome">{{usuario}}</span>
+      <br>
+      <span class="atletaTitulo">{{email}}</span>
+
+      <ion-avatar item-start>
+        <img src="assets/imgs/m3logo.png">
+      </ion-avatar>
+    </ion-item>
+
+
+    <ion-list>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)"  class="fundoMenu">
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

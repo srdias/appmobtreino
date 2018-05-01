@@ -1,0 +1,39 @@
+page-treino-detalhe {
+    p {
+        color: chocolate;
+    }
+
+    .diaSemana{
+        color: rgb(30, 30, 30);
+        font-size: 22px;
+        padding: 0px 0px;
+        font-weight: bold;
+    }
+    .diaMes{
+        color: rgb(30, 30, 30);
+        font-size: 12px;
+        padding: 0px 0px;
+    }
+    .detalheTreino{
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    .edicaoArea{
+        //color:rgb(0, 0, 0);
+        border:1px solid rgb(206, 207, 207);
+        
+        //box-shadow:0 0 5px rgb(255, 153, 0);
+        //background-size:auto 100%;
+        padding-left: 5px;
+        padding-top: 5px;
+        :focus{
+            border:1px solid rgb(206, 207, 207);
+            background-color:#dfebff;
+            //background-color: rgb(240, 243, 198);
+            //box-shadow:0 0 5px rgb(255, 153, 0);
+            padding-left: 5px;
+            padding-top: 5px;
+        }
+    }
+}

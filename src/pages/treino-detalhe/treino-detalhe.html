@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Treino Detalhe</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="fundo">
+  <div *ngFor="let item of items">
+    <ion-card>
+      <ion-item>
+
+        <span class="diaSemana">{{usuario}}</span>
+        <br>
+        <span class="diaMes">{{item.semanaU}}, {{item.diaCompleto}}</span>
+        <ion-avatar item-start>
+          <img src="assets/imgs/m3logo.png">
+        </ion-avatar>
+      </ion-item>
+
+      <ion-card-content>
+        <span class="detalheTreino">Detalhe do treino:</span>
+        <br>
+        <p class="large" [innerHTML]="item.descricao"></p>
+      </ion-card-content>
+
+      <ion-row>
+        <ion-col>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-left clear small (click)="itemTappedFeedback($event)" *ngIf="!feedBackVisible">
+            <ion-icon name="text"></ion-icon>
+            <div>Escrever feedback do treino</div>
+          </button>
+        </ion-col>
+      </ion-row>
+
+
+    </ion-card>
+
+
+    <ion-card *ngIf="feedBackVisible">
+      <ion-item>
+        <span class="detalheTreino">Feedback:</span>
+      </ion-item>
+      <ion-card-content>
+        <ion-textarea [(ngModel)]="feedbackDados.texto" id="textFeedback" #textFeedback class="edicaoArea" rows="5" placeholder=""></ion-textarea>
+
+        <br>
+        <div class="botao-container">
+          <button ion-button (click)="itemTappedGravar($event,item)" class="botoes" small>Gravar</button>
+        </div>
+      </ion-card-content>
+
+    </ion-card>
+
+  </div>
+
+</ion-content>
